@@ -131,6 +131,7 @@ img{
     height: auto;
 }
 
+
 ul,ol{
     list-style: none;
     padding-left: 0;
@@ -159,8 +160,8 @@ ul,ol{
     min-width: 320px;
     max-width: 448px;
  
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
 
@@ -665,23 +666,28 @@ header {
 
 .information-list { 
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 72px; 
 }
 
 @media screen and ( min-width:768px) {
     .information-list {
-        display: flex;
     max-width: 720px;
+    display: flex;
+    
+    row-gap: 72px;
+    column-gap: 24px;
     }
     
 }
 
 @media screen and ( min-width:1200px) {
     .information-list {
-        display: flex;
-        flex-direction: row;
         max-width: 1200px;
+        display: flex;
+        flex-wrap: nowrap;
         gap: 24px;
     }
 
@@ -741,13 +747,30 @@ header {
 }
 
 
-
-
 /* Doing img */
 
 .poster {
-    padding-top: 0px;
+    display: none;
 }
+
+@media screen and (min-width:768px) {
+    .poster{
+        max-width: 720px;
+        display: none;
+
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .poster{
+        display: flex;
+        max-width: 1200px;
+        padding-top: 0px;
+    }
+    
+}
+
 
 .poster-title{
     color: var(--primary-text-color);
@@ -787,6 +810,52 @@ header {
 
 }
 
+
+@media screen and (min-width:768px) {
+    .content-title{
+        max-width: 720px;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .content-title{
+        max-width: 1200px;
+    }
+    
+}
+
+.content-list {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    margin-top: 72px;
+}
+
+@media screen and (min-width:768px) {
+    .content-list{
+        max-width: 720px;
+        justify-content: center;
+        row-gap: 64px;
+        column-gap: 24px;
+        
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .content-list {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+    
+}
+
 .content-item-title{
     color: var(--primary-text-color);
     font-size: 20px;
@@ -802,13 +871,6 @@ header {
     letter-spacing: 0.02em;
     font-weight: 400;
 }
-
-.content-list {
-    display: flex;
-    gap: 24px;
-    margin-top: 72px;
-}
-
 
 .group-elements{
     padding: 32px 16px;
@@ -870,8 +932,28 @@ header {
 
 .customers-list{
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 16px;
+    
     margin-top: 72px;
+}
+
+@media screen and (min-width:768px) {
+    .Customers-list{
+        max-width: 720px;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .Customers-list{
+        max-width: 1200px;
+        display: flex;
+        gap: 24px;
+    }
+    
 }
 
 .busines-partner{
@@ -996,8 +1078,25 @@ header {
 .subscribe{
     display: block;
     align-items: center;
+}
+
+@media screen and (min-width:768px) {
+    .subscribe{
+        max-width: 720px;
+    }
     
-    margin-left: auto;
+}
+
+@media screen and (min-width:1200px) {
+    .subscribe{
+        max-width: 1200px;
+        display: block;
+        align-items: center;
+        
+        margin-left: auto;
+}
+    }
+    
 }
 
 .footer-input{
@@ -1085,7 +1184,38 @@ footer{
 
 .flex-footer{
     display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 72px;
 }
+
+@media screen and (min-width:768px) {
+    .flex-footer{
+    max-width: 720px;
+    display: flex;
+    flex-direction: row;
+    /* text */
+    text-align: start;
+    align-items: normal;
+    gap: 24px;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .flex-footer{
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        /* text */
+        text-align: start;
+        align-items: normal;
+    }
+    
+}
+
  
 .footer-text{
     max-width: 264px;
@@ -1098,7 +1228,24 @@ footer{
 
 .footer-media{
     display: block;
-    margin-left: 120px;
+    row-gap: 72px;
+}
+
+
+@media screen and (min-width:320px) {
+    .footer-media{
+        max-width: 720px;
+
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .footer-media{
+        max-width: 1200px;
+        margin-left: 120px;
+    }
+    
 }
 
 .social-media-subscribe{
