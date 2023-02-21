@@ -396,7 +396,9 @@ header {
     background-position: center;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .hero{
         max-width: 768px;
         background-image: linear-gradient(
@@ -406,10 +408,11 @@ header {
         ),
         url()
     }
-    
 }
-@media screen and (min-width:1200px) {
-    
+
+@media screen and (min-width:1200px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx){
     .hero {
         
         max-width: 1200px;
