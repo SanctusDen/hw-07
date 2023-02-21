@@ -285,18 +285,18 @@ header {
     display: none;
 }
 
-@media screen and (min-width:768) {
+@media screen and (min-width:768px) {
     .main-nav{
         max-width: 720px;
         display: flex;
+        margin-left: auto;
     }
     
 }
 
 @media screen and (min-width:1200px) {
     .main-nav{
-        max-width: 1200px;
-        display: flex;
+        max-width: 1200px;  
         margin-left: 76px;
     }
     
@@ -309,7 +309,7 @@ header {
     letter-spacing: 0.02em;
     color: var(--text-slate-color);
     display: none;
-    gap: 40px;
+    
     margin-left: auto;
     
 }
@@ -318,6 +318,8 @@ header {
     .auth-nav{
         max-width: 720px;
         display: flex;
+        flex-direction: column;
+        
     }
     
 }
@@ -326,6 +328,8 @@ header {
     .auth-nav{
         max-width: 1200px;
         display: flex;
+        flex-direction: row;
+        gap: 40px;
     }
     
 }
@@ -348,8 +352,24 @@ header {
     font-size: 16px;
     line-height: 1.5;
     display: block;
-    padding: 24px 0px;
+    
     transition: color 250ms var(--timing-cubic);
+}
+
+@media screen and (min-width:768px) {
+    .info{
+        max-width: 720px;
+        display: block;
+        padding: 4px 0px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .info{
+        max-width: 1200px;
+        
+        padding: 24px 0px;
+    }
 }
 
 .box-main {
@@ -659,6 +679,7 @@ header {
 @media screen and (min-width:768px) {
     .information-title{
         max-width: 720px;
+        
     }
     
 }
@@ -729,7 +750,7 @@ header {
         gap: 24px;
     }
 
-    .information-item-antena::before{
+    .information-item, .antena::before{
     content: '';
     width: 264px;
     height: 112px;
@@ -743,7 +764,7 @@ header {
     background-position: center;
 }
 
-.information-item-clock::before{
+.information-item, .clock::before{
     content: '';
     width: 264px;
     height: 112px;
@@ -756,7 +777,7 @@ header {
     background-position: center;
 }
 
-.information-item-diagramma::before{
+.information-item, .diagramma::before{
     content: '';
     width: 264px;
     height: 112px;
@@ -769,7 +790,7 @@ header {
     background-position: center;
 }
 
-.information-item-astroboy::before{
+.information-item, .astroboy::before{
     content: '';
     width: 264px;
     height: 112px;
@@ -783,6 +804,18 @@ header {
 }
     
 }
+
+.information-item{
+
+}
+
+@media screen and (min-width:768px) {
+    .information-item{
+        max-width: 720px;
+        width: 356px;
+    }
+}
+  
 
 
 /* Doing img */
@@ -1029,7 +1062,27 @@ header {
 .buttons-list{
     display: flex;
     gap: 24px;
-    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width:768px) {
+    .buttons-list{
+        max-width: 720px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .buttons-list{
+        max-width: 1200px;
+        display: flex;
+        
+    }
+    
 }
 
 .card-text{
@@ -1405,6 +1458,10 @@ footer{
   
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
   
 .menu-container.is-open {
@@ -1460,6 +1517,7 @@ footer{
     line-height: 1.11;
     text-transform: capitalize;
     color: #434455;
+    padding-bottom: 40px;
 }
 
 .box{
@@ -1468,4 +1526,5 @@ footer{
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #434455;
+    padding-bottom: 48px;
 }
