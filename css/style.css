@@ -387,8 +387,8 @@ header {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-    url('../images/people-office\ 1.jpg');
-    max-width: 1200px;
+    url('../images/bgdhero/Dark-bg_mob@1x.jpg');
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
@@ -396,34 +396,63 @@ header {
     background-position: center;
 }
 
-@media screen and (min-width:768px) and (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    .hero{
-        max-width: 768px;
-        background-image: linear-gradient(
+  .hero {
+    background-image: 
+    linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
-        ),
-        url()
-    }
+        ),url('../images/bgdhero/Dark-bg_mob@2x.jpg');
+  }
 }
 
-@media screen and (min-width:1200px) and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx){
-    .hero {
-        
-        max-width: 1200px;
+@media screen and (min-width:481px) {
+    .hero{
         background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-        url()
+    url('../images/bgdhero/Dark-bg_tabl@1x.jpg');
     }
-    
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ),
+    url('../images/bgdhero/Dark-bg_tabl@2x.jpg');
+  }
+}
+}
+
+@media screen and (min-width:481px) {
+    .hero{
+        background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ),
+    url('../images/bgdhero/Dark-bg_desc@1x.jpg');
+    }
+    @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ),
+    url('../images/bgdhero/Dark-bg_desc@2x.jpg');
+  }
+}
 }
 
 .title-hero{
