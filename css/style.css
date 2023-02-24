@@ -204,7 +204,20 @@ header {
     letter-spacing: 0.03em;
     font-weight: 800;
     color: var(--title-bgc-text);
+    padding: 24px 0;
     
+}
+
+@media screen and (min-width:768px) {
+    .logo{
+
+    }
+}
+
+@media screen and (min-width:768px) {
+    .logo{
+        padding: 24px 0 28px 0;
+    }
 }
 
 .logo-text {
@@ -266,20 +279,7 @@ header {
     border-radius: 2px;
 }
 
-@media screen and (min-width:768px) {
-    .activity::after{
-        max-width: 768px;
-    }
-    
-}
 
-@media screen and (min-width:1200px) {
-    .activity::after{
-        max-width: 1200px;
-        bottom: -4px;
-    }
-    
-}
 
 .site-nav{
     font-weight: 500;
@@ -391,20 +391,6 @@ header {
 .box-main {
     display: flex;
     align-items: center;
-    height: 70px;
-}
-
-@media screen and (min-width:768px) {
-    .box-main{
-        max-width: 1200px;
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .box-main{
-        max-width: 1200px;
-        height: 76px;
-    }
 }
 
 
@@ -430,6 +416,7 @@ header {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
+    max-width: 767px;
     background-image: 
     linear-gradient(
         to right,
@@ -441,6 +428,7 @@ header {
 
 @media screen and (min-width:768px) {
     .hero{
+        max-width: 1200px;
         background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
@@ -464,6 +452,8 @@ header {
 
 @media screen and (min-width:1200px) {
     .hero{
+        max-width: 1440px;
+        padding: 188px 0;
         background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
@@ -795,6 +785,7 @@ header {
     letter-spacing: 0.02em;
     font-weight: 700;
     margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 @media screen and (min-width:768px) {
@@ -876,7 +867,7 @@ header {
     width: 264px;
     height: 112px;
     display: block;
-    margin-bottom: 8px;
+    
     background-color: var(--button-color-on);
     fill: #2e2f42;
     border-radius: 4px;
@@ -890,7 +881,7 @@ header {
     width: 264px;
     height: 112px;
     display: block;
-    margin-bottom: 8px;
+    
     background-color: var(--button-color-on);
     border-radius: 4px;
     background-image: url(../images/icon/clock.svg);
@@ -903,7 +894,7 @@ header {
     width: 264px;
     height: 112px;
     display: block;
-    margin-bottom: 8px;
+    
     background-color: var(--button-color-on);
     border-radius: 4px;
     background-image: url(../images/icon/diagram.svg);
@@ -916,7 +907,7 @@ header {
     width: 264px;
     height: 112px;
     display: block;
-    margin-bottom: 8px;
+    
     background-color: var(--button-color-on);
     border-radius: 4px;
     background-image: url(../images/icon/astronaut.svg);
@@ -1287,18 +1278,20 @@ header {
     column-gap: 24px;
 }
 
+
 /* nav subscribe */
 
 .subscribe{
     display: block;
     align-items: center;
+    width: 100%;
 }
 
 @media screen and (min-width:768px) {
     .subscribe{
         max-width: 768px;
         margin-top: 72px;
-        margin-left: 44px;
+        margin-left: 108px;
         padding-right: 108px;
 
     }
@@ -1308,6 +1301,7 @@ header {
 @media screen and (min-width:1200px) {
     .subscribe{
         max-width: 1200px;
+        width: auto;
         display: block;
         align-items: center;
         margin-left: auto;
@@ -1325,7 +1319,7 @@ header {
     border-radius: 4px;
     color: rgba(255, 255, 255, 0.6);
     /* width: 398px; */
-    width: calc(100% - -120px);
+    width: 100%;
     height: 40px;
     padding: 8px 0 8px 16px;
     background-color: transparent;
@@ -1589,16 +1583,21 @@ footer{
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
     background-color: var(--title-text-color);
     z-index: 999;
   
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
 
-    display: flex;
+    /* display: flex;
+    justify-content: space-between; */
     flex-direction: column;
-    justify-content: space-between;
+    overflow: auto;
+    
 }
   
 .menu-container.is-open {
@@ -1615,9 +1614,8 @@ footer{
 }
   
 .mobile-menu {
-    margin-top: 32px;
-    
     list-style: none;
+    margin-bottom: 284px;
 }
   
 .mobile-menu .link {
@@ -1632,7 +1630,7 @@ footer{
     text-transform: capitalize;
 
     /* padding-bottom: 40px; */
-    margin-top: 32px;
+    /* margin-top: 32px; */
 }
 
 .actions-box{
@@ -1648,6 +1646,10 @@ footer{
     fill: var(--button-color-on);
 }
 
+.mobile-li{
+    margin-bottom: 32px;
+}
+
 .boxi{
     font-weight: 600;
     font-size: 36px;
@@ -1655,6 +1657,7 @@ footer{
     text-transform: capitalize;
     color: #434455;
     margin-bottom: 40px;
+    color: var(--title-bgc-text);
 }
 
 .box{
