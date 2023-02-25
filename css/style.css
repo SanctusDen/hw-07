@@ -785,7 +785,7 @@ header {
     letter-spacing: 0.02em;
     font-weight: 700;
     margin-bottom: 8px;
-    margin-top: 8px;
+    margin-top: 0;
 }
 
 @media screen and (min-width:768px) {
@@ -802,6 +802,7 @@ header {
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
+        margin-top: 8px;
         
     }
     
@@ -1543,6 +1544,26 @@ footer{
 
 
 /* MOBILE MENU */
+
+.mt{
+    padding-top: 25px;
+    padding-bottom: 26px;
+}
+@media screen and (min-width:768px) {
+    .mt{
+        max-width: 768px;
+        padding-bottom: 22px;
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    .mt{
+        max-width: 1200px;
+        padding: 0;
+    }
+    
+}
 
 .menu-toggle {
     min-height: 34px;
