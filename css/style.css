@@ -1281,12 +1281,12 @@ header {
 
 @media screen and (min-width:768px) {
     .gallery{
-        column-gap: 18px;
+        column-gap: 16px;
     }
 }
 @media screen and (min-width:1200px) {
     .gallery{
-        column-gap: 20px;
+        column-gap: 22px;
     }
 }
 
